@@ -32,19 +32,6 @@ h2 {
     margin: 5px 0;
 }
 
-#income, #expense, #balance {
-    font-weight: bold;
-    color: #28a745;
-}
-
-#expense {
-    color: #dc3545;
-}
-
-#balance {
-    color: #007bff;
-}
-
 .form-group {
     margin-bottom: 10px;
 }
