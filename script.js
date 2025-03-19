@@ -6,8 +6,13 @@ function addTransaction() {
     let amount = parseFloat(document.getElementById('amount').value);
     let type = document.querySelector('input[name="type"]:checked').value;
 
-    if (name === "" || category === "" || isNaN(amount) || amount == 0) {
+    if (name === "" || category === "" || isNaN(amount) || amount <= 0) {
         alert("Please enter valid details.");
+        return;
+    }
+
+    if (type === "expense" && amount > income) {
+        alert("Invalid transaction: Expense exceeds available income.");
         return;
     }
 
@@ -34,11 +39,6 @@ function updateBalance() {
     document.getElementById('income').textContent = income.toFixed(2);
     document.getElementById('expense').textContent = expense.toFixed(2);
     document.getElementById('balance').textContent = balance.toFixed(2);
-
-    // Show alert if expense exceeds income
-    if (expense > income) {
-        alert("Your expense exceed your income!");
-    }
 }
 
 function clearFields() {
