@@ -11,10 +11,18 @@
 
         <div class="container">
             <div class="calculator">
+                <p><strong>Initial Budget: </strong> P <span id="income">0</span></p>
                 <p><strong>Income: +</strong> P <span id="income">0</span></p>
                 <p><strong>Expense: -</strong> P <span id="expense">0</span></p>
                 <p><strong>Total Balance:</strong> P <span id="balance">0</span></p>
 
+            <div class="form-group1">
+                <label>Initial Budget:</label>
+                <input type="number" id="amount1">
+            </div>
+
+            <button onclick="addTransaction()">Add</button>
+            
             <h3>Add Transaction</h3>
             <div class="form-group">
                 <label>Name:</label>
