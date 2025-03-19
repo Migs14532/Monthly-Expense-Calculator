@@ -11,8 +11,10 @@ function addTransaction() {
         return;
     }
 
-    if (type === "expense" && amount > income) {
-        alert("Invalid transaction: Expense exceeds or not enough income.");
+    let balance = income - expense;
+
+    if (type === "expense" && amount > balance) {
+        alert("Insufficient balance for this expense.");
         return;
     }
 
